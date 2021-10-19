@@ -6,4 +6,4 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-interface SahamRepository : JpaRepository<Saham, Long>
+interface SahamRepository : JpaRepository<Saham, String>

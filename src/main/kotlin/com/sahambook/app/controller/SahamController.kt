@@ -32,7 +32,7 @@ class SahamController(
     }
 
     @GetMapping(value = ["/saham/{id}"])
-    fun Get(@PathVariable id: Long): ResponseEntity<Any> {
+    fun Get(@PathVariable id: String): ResponseEntity<Any> {
         return try {
             val result: Optional<Saham> = sahamRepository.findById(id)
             val countTbl: Long = sahamRepository.count()
@@ -56,7 +56,7 @@ class SahamController(
     }
 
     @DeleteMapping("/saham/{id}")
-    fun Delete(@PathVariable id: Long): ResponseEntity<Any> {
+    fun Delete(@PathVariable id: String): ResponseEntity<Any> {
         return try {
             val result: Unit = sahamRepository.deleteById(id)
             val countTbl: Long = sahamRepository.count()

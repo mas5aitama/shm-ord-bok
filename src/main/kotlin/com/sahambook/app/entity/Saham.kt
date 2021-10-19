@@ -13,12 +13,6 @@ import javax.validation.constraints.*
 @Table(name = "saham")
 data class Saham(
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
-    @NotNull
-    @Column(name = "SAHAM_ID", nullable = false)
-    var id: Long? = null,
-
     @NotNull
     @Column(name = "kode_saham", nullable = false)
     var kodeSaham: String? = null,
@@ -64,7 +58,7 @@ data class Saham(
     var domesticBuy: Double? = null,
 
     @OneToMany(cascade = arrayOf(CascadeType.ALL),orphanRemoval = true)
-    @JoinColumn(name = "SAHAM_ID")
+    @JoinColumn(name = "kode_saham")
     val orderbook: List<OrderBook>?  = ArrayList<OrderBook>()
 
 )
