@@ -1,8 +1,6 @@
 package com.sahambook.app.entity
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import org.hibernate.annotations.GenericGenerator
-import java.io.Serializable
+
 import javax.persistence.*
 import javax.validation.constraints.*
 
