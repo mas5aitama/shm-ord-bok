@@ -8,6 +8,7 @@ import javax.validation.constraints.*
 @Table(name = "order_book")
 data class OrderBook(
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "native")
     var id: Long? = null,
 
     @NotNull
