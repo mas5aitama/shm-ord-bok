@@ -75,9 +75,11 @@
 			<artifactId>bcprov-jdk15on</artifactId>
 			<version>1.64</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib -->
-
-
+ 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+			<version>5.5.2</version>
+		</dependency>
 	</dependencies>
 
 
